@@ -132,8 +132,104 @@ console.log(firstName)
 // const ageAverage = (rohitAge + ramAge) / 2;
 // console.log(ageAverage)
 
-// ram, ajay 
+// ram, ajay
 //ram w = 95kg , h =1.88m
 //ajay w = 85kg , h =1.68m
 // BMI = w / (height * height) or w / height ** 2
-//rem > ajay --true
+//ram > ajay --true
+
+// const ramWeight = 95;
+// const ramHeight = 1.88;
+// const ajayWeight = 85;
+// const ajayHeight = 1.68;
+
+// const ramBMI = ramWeight / (ramHeight * ramHeight);
+// const ajayBMI = ajayWeight / ajayHeight ** 2;
+
+// console.log(ramBMI, ajayBMI)
+
+// const ramHigherBMI = ramBMI > ajayBMI
+// console.log(ramHigherBMI)
+
+// Increment and Decrement Operator
+// let x = 5;
+// // x++; // x = x + 1 //6
+// // x--; // x = x - 1 //5
+// console.log(--x)
+// console.log(x)
+
+/* String Literals */
+
+// let firstName = "Abhishek";
+// let birthYear = 2001;
+// let job = "Teacher";
+// const currentYear = 2023;
+// I am Abhsihek my age is 22 and my job is teacher
+// const abhishek =
+//   "I am " +
+//   firstName +
+//   " my age is " +
+//   (currentYear - birthYear) +
+//   " and my job is " +
+//   job;
+// console.log(abhishek);
+
+// const abhishek2 = `I am ${firstName} my age is ${currentYear - birthYear} and my job is ${job}`;
+// console.log(abhishek2)
+
+// const string = "This is \n an example \n Multiline  string";
+// console.log(string)
+// const string2 = `This is
+// an Multiline
+// string`;
+// console.log(string2)
+
+// const regularString = `This is a regular String ${firstName}`;
+
+// console.log(regularString)
+
+
+// Decisions 
+
+// let age = 16;
+// let isOldEnough = age >= 18; //true or false
+// if() {
+
+// }else {
+
+// }
+// if (age >= 18) {
+//   console.log("You Were eligible for Driving License 🚗");
+// }else {
+//     console.log("Not Eligible for Driving :(");
+// }
+
+// console.log("After The if Statement ...")
+
+// const birthYear = 2023;
+// let century;
+
+// if(birthYear <= 2000) {
+//     century = 20;
+// }else {
+//     century = 21;
+// }
+
+// console.log(century)
+
+// Type Conversion and Type coercion
+
+// const birthYear = "1999";
+// console.log(Number(birthYear) , birthYear);
+
+// const age = 23;
+// console.log(typeof String(age))
+
+// console.log("I am " + String(23) + " years old");
+
+// console.log("I am " + 23 + " years Old");
+// console.log("5" + "4");
+
+// console.log("5" / 4)
+
+// console.log(Number("abhishek"))
