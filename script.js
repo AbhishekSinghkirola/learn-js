@@ -188,8 +188,7 @@ console.log(firstName)
 
 // console.log(regularString)
 
-
-// Decisions 
+// Decisions
 
 // let age = 16;
 // let isOldEnough = age >= 18; //true or false
@@ -233,3 +232,142 @@ console.log(firstName)
 // console.log("5" / 4)
 
 // console.log(Number("abhishek"))
+
+// const ramWeight = 95;
+// const ramHeight = 1.88;
+// const ajayWeight = 85;
+// const ajayHeight = 1.68;
+
+// const ramBMI = ramWeight / (ramHeight * ramHeight);
+// const ajayBMI = ajayWeight / ajayHeight ** 2;
+
+// console.log(ramBMI, ajayBMI);
+
+// if(ramBMI > ajayBMI) {
+//     console.log(`Ram has Higher BMI than Ajay`);
+// }else{
+//     console.log(`Ajay has Higher BMI than Ram`)
+// }
+
+// ECMAscript
+// transpiling or polyfiling - BABEL
+
+// Truthy Falsy Values
+// false 0,'', undefined, null, NaN
+// true - 1, 'abc',[] etc
+
+// console.log(Boolean(0))
+// console.log(Boolean(''))
+// console.log(Boolean(undefined))
+// console.log(Boolean(null))
+// console.log(Boolean('Abhishek'))
+// console.log(Boolean([]))
+// console.log(Boolean({}))
+// console.log(Boolean(Number("Abhishek")));
+
+// let money;
+// money = 10;
+// if (money) {
+//   console.log("You can Spend");
+// } else {
+//   console.log("Don't have enough Money to spend Get a job First");
+// }
+
+// let height;
+
+// if(height) {
+//     console.log(`Yay! Height is Defined`);
+// }else {
+//     console.log(`OOPs! Height is Undefined`)
+// }
+
+// Equality Operator
+
+// const age = '19';
+
+// // Strict Equality operator
+// if(age === 19) {
+//     console.log("1. your age is 19")
+// }
+
+// // Loose Equality Opeator
+
+// if(age == 19) {
+//     console.log("2. Your age is 19")
+// }
+
+// 21,7,8 fav number
+// const favNumber = 80;
+
+// if (favNumber === 21) {
+//   console.log(`21 is coll Number!`);
+// } else if (favNumber === 7) {
+//   console.log(`7 is cool Number!`);
+// } else if (favNumber === 8) {
+//   console.log(`8 is also a cool Number!`);
+// } else {
+//   console.log(`why not 21, 7, 8😭`);
+// }
+
+// let age = 13;
+
+// if (age !== 18) { // 13 !== 18 //true
+//   console.log("Age is not equal to 18");
+// } else {
+//   console.log("Age is 18");
+// }
+
+// Logical Operators
+//  And (&&) , or (||), not (!)
+
+// condition 1  &&  condition 2 - both will true = true
+// condition 1  ||  condition 2 - anyone of these will true = true
+
+/**
+ * Truth Table for and
+ * A    B   RES
+ * T    T   T
+ * T    F   F
+ * F    T   F
+ * F    F   F
+ *
+ * turth table for or
+ *
+ * A   B   RES
+ * T   T   T
+ * T   F   T
+ * F   T   T
+ * F   F   F
+ *
+ * truth table for not
+ * A  RES
+ * T  F
+ * F  T
+ *
+ */
+
+// let hasDrivingLicense = true;
+// let hasGoodVision = true;
+// let isTired = true;
+
+// // console.log(hasDrivingLicense && hasGoodVision);
+// // console.log(hasDrivingLicense || hasGoodVision);
+// // console.log(!hasDrivingLicense);
+
+// if(hasDrivingLicense && hasGoodVision || !isTired) { // true && true => true || false
+//     console.log("You can Drive 🚗")
+// }else {
+//     console.log("You cannot Drive :D");
+// }
+
+/* There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
+    1. Calculate the average score for each team, using the test data below
+    2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
+    
+    3. BONUS 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. HINT: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉
+    4. BONUS 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy.
+    TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+    TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+    TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+    GOOD LUCK 😀 
+*/
