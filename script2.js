@@ -124,3 +124,46 @@
 //       HINT: To calculate average of 3 values, add them all together and divide by 3
 //       HINT: To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉
 //       GOOD LUCK 😀
+
+// Task : create a function to check number is odd or even
+//  how many argument we will pass? 1
+//how to create function expression // yes i know
+// how to find even number // number / 2 == 0
+// how to find odd number // not complete divide
+
+// find even number
+//return even or odd
+
+const checkEvenOdd = function (inputValue) {
+  if (inputValue % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+};
+
+// const yourNumber = Number(prompt("Enter Your Number : "));
+// console.log(checkEvenOdd(2));
+// console.log(checkEvenOdd(3));
+// console.log(checkEvenOdd(5));
+// console.log(checkEvenOdd(10));
+// console.log(checkEvenOdd(-10));
+// console.log(checkEvenOdd(yourNumber));
+
+// Task : write a function to checkpositive number , which will call inside your check oddeven function
+// Odd Even Will only applicable on Positive Numbers so Create a function to check the number is positive or not
+
+// const friend1 = "Ram";
+// const friend2 = "Rohit";
+// const friend3 = "Sachin";
+
+// const years = new Array(1999 , 1954, 2001, 2023)
+
+// console.log(years)
+
+const friends = ["Ram", "Rohit", "Sachin", "Raman", "John", "Mike", "Kartik"]; //index -> 4,3 , length -> 5 -1 ,4 -1
+
+// console.log(friends[0] , "," , friends[2]);
+console.log(friends.length);
+
+console.log(friends[friends.length - 1]); // friends [5 - 1] => friends[4]
