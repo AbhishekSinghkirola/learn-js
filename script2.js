@@ -125,6 +125,27 @@
 //       HINT: To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉
 //       GOOD LUCK 😀
 
+// function calcAverage(s1, s2, s3) {
+//   return (s1 + s2 + s3) / 3;
+// }
+
+// function checkWinner(avgDolhphins, avgKoalas) {
+//   if (avgDolhphins > avgKoalas * 2) {
+//     console.log(`Dolphins Wins (${avgDolhphins} vs ${avgKoalas})`);
+//   } else if (avgKoalas > avgDolhphins * 2) {
+//     console.log(`Koalas Wins (${avgKoalas} vs ${avgDolhphins})`);
+//   } else {
+//     console.log(`No one Wins the Trophy 😭`);
+//   }
+// }
+
+// const avgDolhphins = calcAverage(85, 54, 41);
+// const avgKoalas = calcAverage(23, 34, 27);
+
+// console.log(avgDolhphins, avgKoalas);
+
+// checkWinner(avgDolhphins, avgKoalas);
+
 // Task : create a function to check number is odd or even
 //  how many argument we will pass? 1
 //how to create function expression // yes i know
@@ -134,16 +155,28 @@
 // find even number
 //return even or odd
 
-const checkEvenOdd = function (inputValue) {
-  if (inputValue % 2 === 0) {
-    return "Even";
-  } else {
-    return "Odd";
-  }
-};
+// const checkEvenOdd = function (inputValue) {
+//   if (checkPositive(inputValue)) { //true - false
+//     if (inputValue % 2 === 0) {
+//       return "Even";
+//     } else {
+//       return "Odd";
+//     }
+//   } else {
+//     return "Invalid!!";
+//   }
+// };
+
+// const checkPositive = function (a) {
+//   if (a >= 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
 
 // const yourNumber = Number(prompt("Enter Your Number : "));
-// console.log(checkEvenOdd(2));
+// console.log(checkEvenOdd(-2));
 // console.log(checkEvenOdd(3));
 // console.log(checkEvenOdd(5));
 // console.log(checkEvenOdd(10));
@@ -161,9 +194,85 @@ const checkEvenOdd = function (inputValue) {
 
 // console.log(years)
 
-const friends = ["Ram", "Rohit", "Sachin", "Raman", "John", "Mike", "Kartik"]; //index -> 4,3 , length -> 5 -1 ,4 -1
+// const friends = ["Ram", "Rohit", "Sachin", "Raman", "John", "Mike", "Kartik"]; //index -> 4,3 , length -> 5 -1 ,4 -1
 
-// console.log(friends[0] , "," , friends[2]);
-console.log(friends.length);
+// console.log(friends[friends.length - 1]) // 7-1 == 6
+// // console.log(friends[0] , "," , friends[2]);
+// console.log(friends.length);
 
-console.log(friends[friends.length - 1]); // friends [5 - 1] => friends[4]
+// console.log(friends[friends.length - 1]); // friends [5 - 1] => friends[4]
+
+// const years = [1999, 1954, 2001, 2023];
+// console.log(years[4]);
+
+// years[4] = 2002;
+// years[5] = 2001;
+// years[years.length - 1] = 1889;
+// years[0] = 1990;
+// console.log(years, years[4]);
+
+// const firstName= "Abhishek";
+// function calcAge(birthYear) {
+//   return 2023 - birthYear;
+// }
+// const abhishek = [firstName, "Singh", calcAge(2001), "Programmer", friends];
+// console.log(abhishek)
+
+// Push Method
+
+// const friends = ["Ram", "Rohit", "Sachin", "23"];
+
+// console.log(friends.push("Kishan"));
+
+// friends.push("Kishan");
+// friends.push("Tanu");
+
+// Unshift
+
+// friends.unshift("Tanu","Kishan","Preet");
+
+// pop
+// friends.pop()
+// friends.pop()
+// const prevFriend = friends.pop();
+
+// Shift
+// console.log(friends.shift());
+
+// const revFriends = [];
+
+// revFriends.push(friends.pop());
+// revFriends.push(friends.pop());
+// revFriends.push(friends.pop());
+
+// console.log(friends,revFriends)
+
+// console.log(friends.indexOf("Rohit1"));
+
+//Task : if array === value do something
+
+// if(friends.indexOf("Ram") >=0 ) { //0 - falsy value
+//   console.log('You have this value present in your array')
+// }
+
+// console.log(friends.includes("Ram1"))
+// if(friends.includes("23")) { //===
+//   console.log("You have friend called Ram");
+// }
+
+// if(friends.indexOf("Rohit1") >= 0) { // 0 - false, 1 - true, -1 -true
+//   console.log("Exsist")
+// }
+
+// if(friends.includes("Ram1")) { //true, false
+//   console.log("Exsist");
+// }
+
+// Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+//       1. Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+//       2. And now let's use arrays! So create an array 'bills' containing the test data below.
+//       3. Create an array 'tips' containing the tip value for each bill, calculated from the function you created before.
+//       4. BONUS: Create an array 'total' containing the total values, so the bill + tip.
+//       TEST DATA: 125, 555 and 44
+//       HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
+//       GOOD LUCK 😀
