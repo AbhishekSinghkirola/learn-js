@@ -268,6 +268,52 @@
 //   console.log("Exsist");
 // }
 
+// Array Methods
+// const friends = ["Ram", "Sachin", "Prem", "21"];
+// const revFriends = []; //prem, sachin, ram
+
+// friends.push("kishan")
+// console.log(friends.push("Laxman", "Rani"));
+
+// friends.unshift("Kishan")
+
+// console.log(friends.pop());
+// console.log(friends.pop());
+
+// friends.shift()
+// friends.shift()
+
+// revFriends.push(friends.pop()); //Prem
+// revFriends.push(friends.pop()); //Sachin
+// revFriends.push(friends.pop()); //Ram
+
+// console.log(friends);
+// console.log(revFriends);
+
+// console.log(friends.indexOf("sachin"));
+// console.log(friends.includes("21")); // ===
+
+// if (friends.indexOf("Ram") >= 0) { // 1 -true, -1 - true, 0 - false
+//   console.log("Exsist");
+// } else {
+//   console.log("Not Exsist");
+// }
+
+// if (friends.includes("Ram1")) { // true, false
+//   console.log("Exsist");
+// } else {
+//   console.log("Not Exsist");
+// }
+
+// const firstName = "Abhishek";
+// const friends = ["Ram", "Rohit", "Sachin"];
+
+// const calcAge = (birthYear) => 2023 - birthYear;
+
+// const abhishek = [firstName, "Singh", calcAge(2001), friends, true, ];
+
+// console.log(abhishek)
+
 // Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
 //       1. Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
 //       2. And now let's use arrays! So create an array 'bills' containing the test data below.
@@ -276,3 +322,65 @@
 //       TEST DATA: 125, 555 and 44
 //       HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
 //       GOOD LUCK 😀
+
+/* function calcTip(billValue) {
+  return billValue >= 50 && billValue <= 300
+    // ? billValue * (15 / 100)
+    : billValue * (20 / 100);
+} */
+
+// const bills = [125, 555, 44];
+
+// const tip1 = calcTip(bills[0]);
+// const tip2 = calcTip(bills[1]);
+
+// const tips = [tip1, tip2, calcTip(bills[2])];
+
+// const total1 = bills[0] + tips[0];
+// const total = [total1, bills[1] + tips[1], bills[2] + tips[2]];
+// console.log(bills);
+// console.log(tips);
+// console.log(total);
+
+// Objects
+
+// const abhishekArray = [
+//   "Abhishek",
+//   "Singh",
+//   2023 - 2001,
+//   "Programmer",
+//   ["Ram", "Rohit", "sachin"],
+// ];
+
+// Object Literals
+const abhishek = {
+  firstName: "Abhishek",
+  lastName: "Singh",
+  age: 2023 - 2001,
+  job: "Programmer",
+  friends: ["Ram", "Rohit", "sachin"],
+};
+
+// console.log(abhishek)
+// dot Notation or Bracket Notation
+
+// console.log(abhishek.firstName, abhishek.age,abhishek.friends)
+
+// console.log(abhishek["firstName"], abhishek["friends"]);
+
+// const placeholder = "Name";
+// console.log(abhishek["first" + placeholder]);
+
+// const propertyName = prompt("What Do you want to know about Abhishek?Choose between firstName, lastName, age, job, friends!!");
+
+// console.log(abhishek[propertyName]); // abhishek['job'], abhishek['friends']
+
+// How to add new key: values in objects
+abhishek.location = "Delhi";
+abhishek['subject'] = "Javascript"
+console.log(abhishek)
+
+// Task : Abhishek has 3 friends and his best friend called Ram
+
+console.log(`${abhishek.firstName} has ${abhishek.friends.length} friends and his best friend called ${abhishek.friends[0]}`) //array.length
+console.log(`${abhishek['firstName']} has ${abhishek['friends'].length} friends and his best friend called ${abhishek['friends'][0]}`) //array.length
