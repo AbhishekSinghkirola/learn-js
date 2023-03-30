@@ -353,13 +353,13 @@
 // ];
 
 // Object Literals
-const abhishek = {
-  firstName: "Abhishek",
-  lastName: "Singh",
-  age: 2023 - 2001,
-  job: "Programmer",
-  friends: ["Ram", "Rohit", "sachin"],
-};
+// const abhishek = {
+//   firstName: "Abhishek",
+//   lastName: "Singh",
+//   age: 2023 - 2001,
+//   job: "Programmer",
+//   friends: ["Ram", "Rohit", "sachin"],
+// };
 
 // console.log(abhishek)
 // dot Notation or Bracket Notation
@@ -376,11 +376,122 @@ const abhishek = {
 // console.log(abhishek[propertyName]); // abhishek['job'], abhishek['friends']
 
 // How to add new key: values in objects
-abhishek.location = "Delhi";
-abhishek['subject'] = "Javascript"
-console.log(abhishek)
+// abhishek.location = "Delhi";
+// abhishek['subject'] = "Javascript"
+// console.log(abhishek)
 
-// Task : Abhishek has 3 friends and his best friend called Ram
+// // Task : Abhishek has 3 friends and his best friend called Ram
 
-console.log(`${abhishek.firstName} has ${abhishek.friends.length} friends and his best friend called ${abhishek.friends[0]}`) //array.length
-console.log(`${abhishek['firstName']} has ${abhishek['friends'].length} friends and his best friend called ${abhishek['friends'][0]}`) //array.length
+// console.log(`${abhishek.firstName} has ${abhishek.friends.length} friends and his best friend called ${abhishek.friends[0]}`) //array.length
+// console.log(`${abhishek['firstName']} has ${abhishek['friends'].length} friends and his best friend called ${abhishek['friends'][0]}`) //array.length
+
+/*
+OBJECT METHODS
+*/
+
+const abhishek = {
+  firstName: "Abhishek",
+  lastName: "Singh",
+  birthYear: 2011,
+  job: "Programmer",
+  friends: ["Ram", "Rohit", "sachin"],
+  hasDrivingLicense: true,
+
+  // calcAge: function (inputYear) {
+  //   return 2023 - inputYear; //22
+  // },
+
+  // calcAge: function () {
+  //   // console.log(this)
+  //   return 2023 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2023 - this.birthYear; //22
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} has ${this.calcAge()} years old ${
+      this.job
+    } and he has ${this.hasDrivingLicense ? "a" : "no"} Driving Licence`;
+  },
+};
+
+// console.log(abhishek.calcAge(2001), abhishek.calcAge(2002)); //22
+// console.log(abhishek["calcAge"](2001), abhishek["calcAge"](2022));
+// console['log']("working....")
+
+// console.log(abhishek.calcAge(abhishek.birthYear)); //2001 => 22
+
+// This keyword - It is equal to the object in which the method is called
+
+// console.log(abhishek.calcAge());
+// console.log(abhishek.calcAge());
+// console.log(abhishek.calcAge());
+// console.log(abhishek.calcAge());
+// console.log(abhishek.calcAge());
+// console.log(abhishek.age);
+// console.log(abhishek.age);
+
+// Task : Abhishek has 22 years old programmer and he has a/no Driving Licence
+
+// console.log(
+//   `${abhishek.firstName} has ${abhishek.calcAge()} years old ${
+//     abhishek.job
+//   } and he has ${abhishek.hasDrivingLicense ? "a" : "no"} Driving License`
+// );
+
+// const hemant = {
+//   firstName: "Hemant",
+//   lastName: "Tanwar",
+//   birthYear: 2001,
+//   job: "PHP Developer",
+//   friends: ["Ram", "Rohit", "sachin"],
+//   hasDrivingLicense: false,
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear; //22
+//     return this.age;
+//   },
+
+//   getSummary: function () {
+//     return `${this.firstName} has ${this.calcAge()} years old ${
+//       this.job
+//     } and he has ${this.hasDrivingLicense ? "a" : "no"} Driving Licence`;
+//   },
+// };
+
+// console.log(abhishek.getSummary());
+// console.log(hemant.getSummary());
+
+// const data = [
+//   {
+//     name: "Abhishek",
+//     job: "PHP",
+//   },
+//   {
+//     name: "Hemant",
+//     job: "JS",
+//   },
+//   {
+//     name: "Kavita",
+//     job: "Js",
+//   },
+//   {
+//     name: "Vikas",
+//     job: "Js",
+//   },
+// ];
+
+// for(let i =0; i<data.length; i++) {
+//   console.log(data[i].name);
+// }
+
+// console.log(data[0]['name']);
+
+// Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
+//         1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
+//         2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
+//         3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+//         TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+//         GOOD LUCK 😀
