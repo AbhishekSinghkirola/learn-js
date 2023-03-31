@@ -389,34 +389,34 @@
 OBJECT METHODS
 */
 
-const abhishek = {
-  firstName: "Abhishek",
-  lastName: "Singh",
-  birthYear: 2011,
-  job: "Programmer",
-  friends: ["Ram", "Rohit", "sachin"],
-  hasDrivingLicense: true,
+// const abhishek = {
+//   firstName: "Abhishek",
+//   lastName: "Singh",
+//   birthYear: 2011,
+//   job: "Programmer",
+//   friends: ["Ram", "Rohit", "sachin"],
+//   hasDrivingLicense: true,
 
-  // calcAge: function (inputYear) {
-  //   return 2023 - inputYear; //22
-  // },
+//   // calcAge: function (inputYear) {
+//   //   return 2023 - inputYear; //22
+//   // },
 
-  // calcAge: function () {
-  //   // console.log(this)
-  //   return 2023 - this.birthYear;
-  // },
+//   // calcAge: function () {
+//   //   // console.log(this)
+//   //   return 2023 - this.birthYear;
+//   // },
 
-  calcAge: function () {
-    this.age = 2023 - this.birthYear; //22
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear; //22
+//     return this.age;
+//   },
 
-  getSummary: function () {
-    return `${this.firstName} has ${this.calcAge()} years old ${
-      this.job
-    } and he has ${this.hasDrivingLicense ? "a" : "no"} Driving Licence`;
-  },
-};
+//   getSummary: function () {
+//     return `${this.firstName} has ${this.calcAge()} years old ${
+//       this.job
+//     } and he has ${this.hasDrivingLicense ? "a" : "no"} Driving Licence`;
+//   },
+// };
 
 // console.log(abhishek.calcAge(2001), abhishek.calcAge(2002)); //22
 // console.log(abhishek["calcAge"](2001), abhishek["calcAge"](2022));
@@ -495,3 +495,108 @@ const abhishek = {
 //         3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
 //         TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 //         GOOD LUCK 😀
+
+// Loops
+
+// retpition
+// Copy sshortcut (shift + alt + down arrow)
+// Dry Principle violates
+// console.log("Lifting Weights Repition 1 🏋️");
+// console.log("Lifting Weights Repition 2 🏋️");
+// console.log("Lifting Weights Repition 3 🏋️");
+// console.log("Lifting Weights Repition 4 🏋️");
+// console.log("Lifting Weights Repition 5 🏋️");
+// console.log("Lifting Weights Repition 6 🏋️");
+// console.log("Lifting Weights Repition 7 🏋️");
+// console.log("Lifting Weights Repition 8 🏋️");
+// console.log("Lifting Weights Repition 9 🏋️");
+// console.log("Lifting Weights Repition 10 🏋️");
+
+// initialization, condition, increment/decrement
+
+// For Loop
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`Lifting Weights Repition ${i} 🏋️`);
+// }
+
+// const abhishekArray = [
+//   "Abhishek",
+//   "Singh",
+//   2023 - 2001,
+//   "Programmer",
+//   ["Ram", "Rohit", "sachin"],
+//   true,
+// ];
+
+// const types = [];
+// console.log(abhishekArray[0]);
+// console.log(abhishekArray[1]);
+// console.log(abhishekArray[2]);
+// console.log(abhishekArray[3]);
+// console.log(abhishekArray[4]);
+// console.log(abhishekArray[5]);
+
+// for (let i = 0; i < abhishekArray.length; i++) {
+//   // 0 < 6, 1<6,2<6,3<6,4<6,5<6,6<6
+//   console.log(abhishekArray[i]);
+// } //6
+
+// for (let i = 0; i <= abhishekArray.length - 1; i++) {
+//   // console.log(abhishekArray[i], typeof abhishekArray[i]);
+// types[i] = typeof abhishekArray[i];
+//   types.push(typeof abhishekArray[i]);
+//   // console.log(types);
+// }
+
+// console.log(types);
+
+// const years = [1991, 1954, 2001, 2003];
+
+// const calcAge = function (birthYear) {
+//   return 2023 - birthYear;
+// };
+
+// console.log(calcAge(years[0]));
+// console.log(calcAge(years[1]));
+// console.log(calcAge(years[2]));
+// console.log(calcAge(years[3]));
+
+// for(let i = 0; i < years.length; i++) {
+//   console.log(calcAge(years[i]));
+// }
+
+// continue Statement and Break Statement
+const abhishekArray = [
+  "Abhishek",
+  "Singh",
+  2023 - 2001,
+  "Programmer",
+  ["Ram", "Rohit", "sachin"],
+  true,
+];
+
+// Continue -> excape the current iteration
+
+// for (let i = 0; i < abhishekArray.length; i++) {
+//   if(typeof abhishekArray[i] !== 'string') continue;
+//   console.log(abhishekArray[i], typeof abhishekArray[i]);
+// }
+
+// break -> terminate the execution
+// for (let i = 0; i < abhishekArray.length; i++) {
+//   if(typeof abhishekArray[i] === 'number') break;
+//   console.log(abhishekArray[i], typeof abhishekArray[i]);
+// }
+
+// Task : - 1  - Put values from 1 to 10 ==> outupt : 1,2,3,4,5,6,7,8,9,10
+
+const myNumbers = [];
+
+// Task 2 : conosle.log only even numbers
+const randomNumbers = [2,5,6,17,28,39,40,100,150,133]
+
+// Task 3 : print table of 5
+
+// Task 4 : 1 + 3 + 5 +6 +7 ==> 22 Find summ of all the elements
+const myArrays = [1,3,5,6,7]
