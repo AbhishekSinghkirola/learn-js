@@ -567,14 +567,14 @@ OBJECT METHODS
 // }
 
 // continue Statement and Break Statement
-const abhishekArray = [
-  "Abhishek",
-  "Singh",
-  2023 - 2001,
-  "Programmer",
-  ["Ram", "Rohit", "sachin"],
-  true,
-];
+// const abhishekArray = [
+//   "Abhishek",
+//   "Singh",
+//   2023 - 2001,
+//   "Programmer",
+//   ["Ram", "Rohit", "sachin"],
+//   true,
+// ];
 
 // Continue -> excape the current iteration
 
@@ -591,12 +591,119 @@ const abhishekArray = [
 
 // Task : - 1  - Put values from 1 to 10 ==> outupt : 1,2,3,4,5,6,7,8,9,10
 
-const myNumbers = [];
+// const myNumbers = [];
 
 // Task 2 : conosle.log only even numbers
-const randomNumbers = [2,5,6,17,28,39,40,100,150,133]
+// const randomNumbers = [2,5,6,17,28,39,40,100,150,133]
 
 // Task 3 : print table of 5
 
 // Task 4 : 1 + 3 + 5 +6 +7 ==> 22 Find summ of all the elements
-const myArrays = [1,3,5,6,7]
+// const myArrays = [1, 3, 5, 6, 7];
+// let sum = 0;
+
+// for (let i = 0; i < myArrays.length; i++) {
+//   sum = sum + myArrays[i]; // 0 + 1 = 1; 1 + 3 = 4; 4 + 5 = 9; 9 + 6 = 15; 15 + 7 = 22
+//   // console.log(sum);
+// }
+// console.log(sum);
+
+// const abhishekArray = [
+//   "Abhishek",
+//   "Singh",
+//   2023 - 2001,
+//   "Programmer",
+//   ["Ram", "Rohit", "sachin"],
+//   true,
+// ];
+
+// for(let i =0 ; i < abhishekArray.length; i++) {
+//   console.log(abhishekArray[i]);
+// }
+
+// for (let i = abhishekArray.length - 1; i >= 0; i--) {
+//   console.log(abhishekArray[i]);
+// }
+
+// for (let i = 2; i <= 20; i += 2) {
+//   console.log(i);
+// }
+
+// Nested Loops - Loop inside loop
+
+//--------E - 1
+// R -1
+// R-2
+// R -3
+// R -4
+// R -5
+// ------E -2
+// R -1
+// R-2
+// R -3
+// R -4
+// R -5
+// ------E -3
+// R -1
+// R-2
+// R -3
+// R -4
+// R -5
+
+// for(let exercise = 1; exercise <=3; exercise++) {
+//   console.log(`------Starting Exercise ${exercise}`);
+//   for(let rep = 1; rep <= 5; rep++) {
+//     console.log(`Exercise ${exercise} : Lifting Weights Repitition ${rep} 🏋️`);
+//   }
+//   //exit
+// }
+
+// //exit
+
+// const array = [
+//   [1,2,3], //0 l->3
+//   ["a","b","c","d"], //1
+//   [11,12,13], //2
+//   [true,false,false,true] //3
+// ];
+
+// console.log(array[0][0]);
+
+// for(let i = 0; i < array.length; i++ ) {
+//   // console.log(array[i]);
+//   for(let j = 0; j < array[i].length; j++) {
+//     console.log(array[i][j]);
+//   }
+// }
+
+/**
+ * i   j
+ * 0   0
+ * 0   1
+ * 0   2
+ * 0   3 false
+ *
+ *
+ *
+ */
+
+// for (let i = 1; i <= 5; i++) {
+//   for (let j = 1; j <= 5; j++) {
+//     document.write("*");
+//   }
+//   document.write("<br>");
+// }
+
+// for(let i = 1; i <= 5; i++) {
+//   for(let j= 1; j <= i; j++) {
+//     document.write(j)
+//   }
+//   document.write("<br>")
+// }
+
+// 1. Write a JS code to find the power of a number using for loop
+// getPower(2,3) //8  2 x 2 x 2
+// getPower(5,3) //125 5 x 5 x 5
+
+// 4. Write a JS code to find the largest number in an array eg [5,78,99,100] =>100
+// 5. Get the sum of two arrays…actually the sum of all their elements. eg : [1,2,3] , [4, 5 ,6]  => 6 + 15 =>21
