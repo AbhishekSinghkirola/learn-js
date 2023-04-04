@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // let hasDriversLicense = false;
 // const hasPassTest = true;
@@ -707,3 +707,112 @@ OBJECT METHODS
 
 // 4. Write a JS code to find the largest number in an array eg [5,78,99,100] =>100
 // 5. Get the sum of two arrays…actually the sum of all their elements. eg : [1,2,3] , [4, 5 ,6]  => 6 + 15 =>21
+
+// While Loop
+
+// for(let i = 1; i <= 15; i++) {
+//   console.log(`Lifting Weights Repitition ${i} 🏋️`);
+// }
+
+// let i = 1; //initialization
+// while(i <= 15) { // condition
+//   console.log(`Lifting Weights Repitition ${i} 🏋️`);
+
+//   i++; // increment/decrement
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1; //2 //6
+
+// while(dice !== 6) {
+//   console.log(`You Rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1; //3 , 6
+//   if(dice === 6) {
+//     console.log("Loop is about to end....");
+//   }
+// }
+
+// Do while Loop
+
+// let i = 25; // initialization
+// do {
+//   console.log(`Lifting Weights Repititon ${i} 🏋️`);
+
+//   i++; // increment/ decrement
+// } while (i <= 15); //condition
+
+// const string = 'string';
+
+// const myFunc = a => a;
+// console.log();
+// document.write();
+
+// PROBLEM 1:
+// We work for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
+// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+// Understanding the Problem
+
+/**
+ * 1. what is amplitude? Answer : difference of min and max temp
+ * 2. how to compute highest temp
+ * 3. how to compute lowest temp
+ * 4. what to do when get sensor error ? Answer : just Skip that part
+ *
+ */
+
+// Sub Problems
+/**
+ * 1. how to ignore errors
+ * 2 . highest temp
+ * 3. Lowest temp
+ * 4. get amplitude
+ *
+ */
+
+// const calcTempAmplitude = function (temp) {
+//   let max = temp[0];
+//   let min = temp[0];
+//   for (let i = 0; i < temp.length; i++) {
+//     if (typeof temp[i] !== 'number') continue;
+//     if (temp[i] > max) max = temp[i];
+//     if (temp[i] < min) min = temp[i];
+//   }
+//   return `Amplitude of the temperatures is ${min - max}`;
+// };
+
+// console.log(calcTempAmplitude(temperatures));
+
+// Problem 2 : Same fucntion for two arrays
+// Understanding
+/**
+ * 1. should we calculate two times for two arrays? Answer : no merge the arrays
+ * 2. how to merge two arrays
+ */
+
+// Sub Problems
+/**
+ * 
+ * 1. merge two arrays
+ */
+
+
+// const calcTempAmplitude2 = function (t1, t2) {
+//   const temps = t1.concat(t2); //[1,2,3,4,5,6]
+//   let max = temps[0];
+//   let min = temps[0];
+//   for (let i = 0; i < temps.length; i++) {
+//     if (typeof temps[i] !== 'number') continue;
+//     if (temps[i] > max) max = temps[i];
+//     if (temps[i] < min) min = temps[i];
+//   }
+//   return `Amplitude of the temperatures is ${min - max}`;
+// };
+
+// console.log(calcTempAmplitude2([1,2,3], [4,5,6]));
+
+//  Given an array of forecasted maximum temperatures, the thermometer displays a string with these temperatures.
+//         Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+//         Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
+//         Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+//         TEST DATA 1: [17, 21, 23]
+//         TEST DATA 2: [12, 5, -5, 0, 4]
