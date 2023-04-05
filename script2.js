@@ -655,7 +655,7 @@ OBJECT METHODS
 //   for(let rep = 1; rep <= 5; rep++) {
 //     console.log(`Exercise ${exercise} : Lifting Weights Repitition ${rep} 🏋️`);
 //   }
-//   //exit
+// //   //exit
 // }
 
 // //exit
