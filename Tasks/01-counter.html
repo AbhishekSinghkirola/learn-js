@@ -61,6 +61,27 @@
         <button type="button" class="reset">Reset</button>
       </div>
     </section>
-    <script></script>
+    <script>
+      const increaseBtn = document.querySelector('.increase');
+      const descreaseBtn = document.querySelector('.decrease');
+      const resetBtn = document.querySelector('.reset');
+
+      const counterEl = document.querySelector('.text');
+
+      let count = 0;
+
+      increaseBtn.addEventListener('click', function () {
+        counterEl.textContent = ++count;
+      });
+
+      descreaseBtn.addEventListener('click', function () {
+        counterEl.textContent = --count;
+      });
+
+      resetBtn.addEventListener('click', function () {
+        count = 0;
+        counterEl.textContent = count;
+      });
+    </script>
   </body>
 </html>

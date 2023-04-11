@@ -114,6 +114,24 @@
 
     <script>
       'use strict';
+      const inputEl = document.querySelector('.table-number');
+      const btn = document.querySelector('.btn');
+
+      const showTable = function () {
+        const tableNumber = inputEl.value;
+        for (let i = 1; i <= 10; i++) {
+          document.querySelector(
+            `.table-${i}`
+          ).textContent = `${tableNumber} X ${i} = ${tableNumber * i}`;
+        }
+      };
+
+      const handleKey = function (e) {
+        if (e.key === 'Enter') showTable();
+      };
+
+      btn.addEventListener('click', showTable);
+      document.addEventListener('keypress', handleKey);
     </script>
   </body>
 </html>

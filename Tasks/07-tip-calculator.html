@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: #c5e4e7;
+            font-family: 'Space Mono', monospace;
+        }
+
+        body {
+            text-align: center;
+            padding-top: 6%;
+            padding-inline: 30px;
+        }
+
+        h3 {
+            color: #848e8f;
+            font-size: 1em;
+            text-align: left;
+        }
+
+        p {
+            color: #86b6b8;
+            text-align: left;
+            padding-left: 10%;
+        }
+
+        input {
+            background-color: #f3f8fb;
+            border-radius: 10px;
+            width: 100%;
+            height: 50px;
+            text-align: right;
+            font-family: 'Space Mono', monospace;
+            border-style: none;
+            outline: none;
+            font-size: 1.25em;
+        }
+
+        input:focus {
+            box-shadow: 0 0 3pt 2pt #26c2ad;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type='number'] {
+            appearance: textfield;
+            -moz-appearance: textfield;
+        }
+
+        .bill-amount {
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: 5%;
+        }
+
+        .people-number {
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: 5%;
+        }
+
+        #splitter-logo {
+            margin: 2%;
+        }
+
+        #calc-container {
+            width: 100%;
+            max-width: 1330px;
+            height: auto;
+            border-radius: 50px;
+            background-color: white;
+            margin: auto;
+            display: flex;
+        }
+
+        .bill-side {
+            width: 50%;
+        }
+
+        .bill {
+            text-align: left;
+            padding: 8%;
+        }
+
+        .tips {
+            text-align: left;
+            padding-left: 8%;
+            padding-right: 5%;
+        }
+
+        .tip-percentage {
+            width: 27%;
+            margin: 2%;
+            text-align: center;
+            color: white;
+            background-color: #00474b;
+            font-size: 1.25em;
+        }
+
+        .tip-percentage:focus {
+            background-color: #26c2ad;
+            color: #00474b;
+        }
+
+        .people {
+            text-align: left;
+            padding: 8%;
+        }
+
+        .total-side {
+            width: 50%;
+            margin: 3%;
+            border-radius: 50px;
+            background-color: #00474b;
+            padding-bottom: 3%;
+        }
+
+        .tip-amount {
+            padding: 10%;
+        }
+
+        .total {
+            padding: 10%;
+        }
+
+        .tip-person {
+            color: white;
+            font-size: 2em;
+            float: right;
+        }
+
+        .total-person {
+            color: white;
+            font-size: 2em;
+            float: right;
+        }
+
+        .reset-button {
+            padding: 0%;
+            width: 80%;
+            height: 50px;
+            font-family: 'Space Mono', monospace;
+            border-style: none;
+            outline-style: none;
+            background-color: #26c2ad;
+            font-size: 1.25em;
+            color: #00474b;
+            font-weight: bolder;
+            border-radius: 8px;
+            margin-top: 6%;
+        }
+
+        .reset-button:hover {
+            background-color: #9fe8df;
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
+
+        .heading {
+            margin-bottom: 20px;
+        }
+
+        @media only screen and (max-width: 1440px) {
+            .tip-percentage {
+                width: 26%;
+            }
+
+            .tip-amount {
+                margin-bottom: 10%;
+            }
+
+            .total {
+                margin-bottom: 10%;
+            }
+
+            .reset-button {
+                margin-bottom: 10%;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            #calc-container {
+                display: block;
+                width: 100%;
+                height: auto;
+                padding-bottom: 1%;
+            }
+
+            .bill-side {
+                width: 100%;
+            }
+
+            .total-side {
+                width: 90%;
+                margin: auto;
+            }
+
+            h3 {
+                margin: 2%;
+            }
+
+            .reset-button {
+                margin: 11%;
+            }
+
+            .attribution {
+                margin-top: 5%;
+            }
+
+            .bill {
+                padding: 8%;
+            }
+
+            .tips {
+                padding: 8%;
+            }
+
+            .people {
+                padding: 8%;
+            }
+        }
+
+        @media only screen and (max-width: 440px) {
+            body {
+                padding-inline: 0;
+            }
+
+            #calc-container {
+                height: auto;
+                padding-bottom: 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Tip Calculator 🧮</h1>
+    <div id="calc-container">
+
+        <!--Left Side-->
+        <div class="bill-side">
+            <div class="bill">
+                <h3>Bill</h3>
+                <input type="number" name="bill" class="bill-amount" value="10" />
+            </div>
+            <div class="tips">
+                <h3>Select Tip %</h3>
+                <div class="tip amounts">
+                    <input type="button" class="tip-percentage" value="5%" />
+                    <input type="button" class="tip-percentage" value="10%" />
+                    <input type="button" class="tip-percentage" value="15%" />
+                    <input type="button" class="tip-percentage" value="25%" />
+                    <input type="button" class="tip-percentage" value="50%" />
+                    <input type="number" class="tip-percentage" value="" placeholder="Custom" />
+                </div>
+            </div>
+        </div>
+        <!--Right Side-->
+        <div class="total-side">
+            <div class="tip-amount">
+                <h3 style="color: white">Tip Amount</h3>
+                <span class="tip-person">$0.00</span>
+            </div>
+            <div class="total">
+                <h3 style="color: white">Total</h3>
+                <span class="total-person">$0.00</span>
+            </div>
+            <div class="reset">
+                <button class="reset-button pointer">RESET</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+       
+    </script>
+</body>
+
+</html>

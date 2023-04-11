@@ -276,5 +276,51 @@
         </button>
       </div>
     </div>
+
+    <script>
+      'use strict';
+      const redBtn = document.querySelector('.red');
+      const blackBtn = document.querySelector('.black');
+      const grayBtn = document.querySelector('.gray');
+
+      const productImageEl = document.querySelector('.product-image');
+      const tagEl = document.querySelector('.tag');
+      const cartEl = document.getElementById('button');
+
+      const displayImage = function (element, value) {
+        element.style.backgroundImage = value;
+      };
+
+      const changeBakground = function (element, value) {
+        element.style.backgroundColor = value;
+      };
+
+      redBtn.addEventListener('click', function () {
+        displayImage(
+          productImageEl,
+          "url('https://i.postimg.cc/cH2pJdny/red-benz.webp')"
+        );
+        changeBakground(tagEl, 'red');
+        changeBakground(cartEl, 'red');
+      });
+
+      blackBtn.addEventListener('click', function () {
+        displayImage(
+          productImageEl,
+          "url('https://i.postimg.cc/NGRJX8hr/black-benz.jpg')"
+        );
+        changeBakground(tagEl, 'black');
+        changeBakground(cartEl, 'black');
+      });
+
+      grayBtn.addEventListener('click', function () {
+        displayImage(
+          productImageEl,
+          "url('https://i.postimg.cc/BvyYTMQ2/gray-benz.jpg')"
+        );
+        changeBakground(tagEl, 'gray');
+        changeBakground(cartEl, 'gray');
+      });
+    </script>
   </body>
 </html>
