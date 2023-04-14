@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 // function square(n) {
 //   return n * n;
@@ -87,3 +87,103 @@
 // const a;
 // let a = 10;
 // let a =20;
+
+// var a = 10;
+
+// Normal function, arrow functions, methods, event listner
+
+// function a() {
+//     console.log(this);
+// }
+
+// var x =10
+// a();
+
+// const a = () => {
+//   console.log(this);
+// };
+
+// a();
+
+// const obj = {
+//   name: 'Abhishek',
+//   birthYear: 1991,
+//   calcAge: function () {
+//     console.log(this.name);
+//   },
+// };
+
+// const obj2 = {
+//   name: 'Rahul',
+//   birthYear: 2001,
+// //   calcAge: function () {
+// //     console.log(this);
+// //   },
+//     // calcAge2: obj.calcAge
+// };
+
+// obj2.calcAge2 = obj.calcAge;
+// obj.calcAge();
+// obj2.calcAge2();
+
+// const h1 = document.querySelector('h1');
+
+// h1.addEventListener('click', () => {
+//   console.log(this);
+// });
+
+// const obj = {
+//   name: 'Abhishek',
+//   birthYear: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2023 - this.birthYear);
+//     // const self = this;
+//     // const a = function () {
+//     //   console.log(self.birthYear);
+//     // };
+//     const a = () => {
+//         console.log(this);
+//     }
+//     a();
+//   },
+// };
+
+// obj.calcAge();
+
+// const add = function (a, b) {
+//   console.log(arguments);
+// };
+// const add =  (a, b) => {
+//   console.log(arguments);
+// };
+
+// add(2, 3);
+
+// Primitive data types and reference data types
+// let a = 20;
+// let b = a;
+
+// a = 30;
+
+// console.log(a);
+// console.log(b);
+
+const obj = {
+  name: 'Abhishek',
+  birthYear: 1991,
+  arr: [1, 2, 3],
+};
+
+// const copyObj = obj;
+
+// obj.arr.push(4);
+
+// console.log(obj);
+// console.log(copyObj);
+
+const copyobj = Object.assign({}, obj)
+obj.arr.push(4);
+copyobj.name = "Ram";
+console.log(obj);
+console.log(copyobj);
