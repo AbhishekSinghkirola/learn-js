@@ -145,6 +145,141 @@
 // const newArr = ['Ram', 'Shivam', ...arr];
 // console.log(newArr);
 
+// const restaurant = {
+//   name: 'Calssico Italiono',
+//   location: 'Delhi, Mumbai, Jaipur',
+//   categories: ['Indian', 'South Indian', 'Chinese', 'Italian'],
+//   starterMenu: ['Chilli Potato', 'Garlic Bread', 'Kabab', 'Paneer Tikka'],
+//   mainMenu: ['Pizza', 'pasta', 'chowmein'],
+
+//   openingHours: {
+//     fri: {
+//       open: 12,
+//       close: 22,
+//     },
+//     sat: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sun: {
+//       open: 0,
+//       close: 24,
+//     },
+//   },
+
+//   order: function (starterIndex, mainMenuIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
+//   },
+
+//   orderDelivery: function ({
+//     starterIndex = 1,
+//     mainIndex = 1,
+//     address,
+//     time = '12:00',
+//   }) {
+//     console.log(
+//       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+//     );
+//   },
+
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(ing1);
+//     console.log(ing2);
+//     console.log(ing3);
+//   },
+// };
+
+// const starterCourse = [...restaurant.categories]
+// console.log(starterCourse);
+
+// const str = "Abhishek";
+// const strrArr = [...str];
+// console.log(strrArr);
+
+// const ingridients = ['onion', 'Spinach', 'Tomato'];
+// const ingridients = [
+//   prompt('Enter Ing 1'),
+//   prompt('Enter Ing 2'),
+//   prompt('Enter Ing 3'),
+// ];
+// restaurant.orderPasta(...ingridients);
+
+// const restCopy = { foundIn : 1991, ...restaurant, founder: "Ram" };
+// console.log(restCopy);
+
+// Rest Patten
+
+// const restaurant = {
+//   name: 'Calssico Italiono',
+//   location: 'Delhi, Mumbai, Jaipur',
+//   categories: ['Indian', 'South Indian', 'Chinese', 'Italian'],
+//   starterMenu: ['Chilli Potato', 'Garlic Bread', 'Kabab', 'Paneer Tikka'],
+//   mainMenu: ['Pizza', 'pasta', 'chowmein'],
+
+//   openingHours: {
+//     fri: {
+//       open: 12,
+//       close: 22,
+//     },
+//     sat: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sun: {
+//       open: 0,
+//       close: 24,
+//     },
+//   },
+
+//   order: function (starterIndex, mainMenuIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
+//   },
+
+//   orderDelivery: function ({
+//     starterIndex = 1,
+//     mainIndex = 1,
+//     address,
+//     time = '12:00',
+//   }) {
+//     console.log(
+//       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+//     );
+//   },
+
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(ing1);
+//     console.log(ing2);
+//     console.log(ing3);
+//   },
+//   orderPizza: function (mainIng, ...otherIng) {
+//     console.log(mainIng);
+//     console.log(...otherIng);
+//   },
+// };
+
+// const arr = [1, 2, 3, 4];
+// console.log(...arr);
+
+// const arr = [1, 2, 3, 4, 5, 6];
+// const arr2 = [5, 6];
+// const [a, ...b] = [1, 2, 3, 4, ...arr2];
+// console.log(a, b);
+
+// restaurant.orderPizza('Spinach', 'Corn', 'Mushroom');
+
+// const add = function (...inputs) {
+//   // console.log(inputs);
+//   let sum = 0;
+//   for (let i = 0; i < inputs.length; i++) {
+//     sum += inputs[i];
+//   }
+//   console.log(sum);
+// };
+
+// add(2, 3);
+// add(2, 3, 10, 14);
+// add(2, 3, 10, 14, 55);
+
 const restaurant = {
   name: 'Calssico Italiono',
   location: 'Delhi, Mumbai, Jaipur',
@@ -187,22 +322,59 @@ const restaurant = {
     console.log(ing2);
     console.log(ing3);
   },
+  orderPizza: function (mainIng, ...otherIng) {
+    console.log(mainIng);
+    console.log(...otherIng);
+  },
 };
 
-// const starterCourse = [...restaurant.categories]
-// console.log(starterCourse);
+// && ||
 
-// const str = "Abhishek";
-// const strrArr = [...str];
-// console.log(strrArr);
+// console.log(3 || false);
+// console.log('' || 'hello');
+// console.log(undefined || 0);
+// console.log(undefined || 0 || '' || 'Abhishek' || null);
 
-// const ingridients = ['onion', 'Spinach', 'Tomato'];
-// const ingridients = [
-//   prompt('Enter Ing 1'),
-//   prompt('Enter Ing 2'),
-//   prompt('Enter Ing 3'),
-// ];
-// restaurant.orderPasta(...ingridients);
+// restaurant.numGuests = 0;
 
-// const restCopy = { foundIn : 1991, ...restaurant, founder: "Ram" };
-// console.log(restCopy);
+// const guest = restaurant.numGuests ? restaurant.numGuests : 10;
+// const guest2 = restaurant.numGuests || 10; //0 || 10
+// Null Coaelscing Operator //Null or undefined
+// const guest2 = restaurant.numGuests ?? 10; //0 || 10
+
+// console.log(guest);
+// console.log(guest2);
+
+// console.log(3 && false);
+// console.log(0 && true);
+// console.log(true && 'Abhishek' && null && 100);
+
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('Mushroom', 'Sipinach');
+// }
+
+// restaurant.orderPizza && restaurant.orderPizza('Mushroom', 'Sipinach');
+
+// 4 % 2 === 0 && console.log('Even');
+
+const rest1 = {
+  name: 'Restro 1',
+  numGuests: 23,
+};
+
+const rest2 = {
+  name: 'Restro 2',
+  owner: 'Abhishek',
+};
+
+// rest1.numGuests = rest1.numGuests || 10; // 23 || 10
+// rest2.numGuests = rest2.numGuests || 10; // undfined || 10
+rest1.numGuests ||= 10; // 23 || 10
+rest2.numGuests ||= 10; // undfined || 10
+
+rest1.owner &&= '<ANONYMOUS>'; // undefined && '<ANONYMOUS>'
+rest2.owner &&= '<ANONYMOUS>'; // Abhishek && '<ANONYMOUS>'
+
+console.log(rest1);
+console.log(rest2);
+
