@@ -280,53 +280,53 @@
 // add(2, 3, 10, 14);
 // add(2, 3, 10, 14, 55);
 
-const restaurant = {
-  name: 'Calssico Italiono',
-  location: 'Delhi, Mumbai, Jaipur',
-  categories: ['Indian', 'South Indian', 'Chinese', 'Italian'],
-  starterMenu: ['Chilli Potato', 'Garlic Bread', 'Kabab', 'Paneer Tikka'],
-  mainMenu: ['Pizza', 'pasta', 'chowmein'],
+// const restaurant = {
+//   name: 'Calssico Italiono',
+//   location: 'Delhi, Mumbai, Jaipur',
+//   categories: ['Indian', 'South Indian', 'Chinese', 'Italian'],
+//   starterMenu: ['Chilli Potato', 'Garlic Bread', 'Kabab', 'Paneer Tikka'],
+//   mainMenu: ['Pizza', 'pasta', 'chowmein'],
 
-  openingHours: {
-    fri: {
-      open: 12,
-      close: 22,
-    },
-    sat: {
-      open: 11,
-      close: 23,
-    },
-    sun: {
-      open: 0,
-      close: 24,
-    },
-  },
+//   openingHours: {
+//     fri: {
+//       open: 12,
+//       close: 22,
+//     },
+//     sat: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sun: {
+//       open: 0,
+//       close: 24,
+//     },
+//   },
 
-  order: function (starterIndex, mainMenuIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
-  },
+//   order: function (starterIndex, mainMenuIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
+//   },
 
-  orderDelivery: function ({
-    starterIndex = 1,
-    mainIndex = 1,
-    address,
-    time = '12:00',
-  }) {
-    console.log(
-      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
-    );
-  },
+//   orderDelivery: function ({
+//     starterIndex = 1,
+//     mainIndex = 1,
+//     address,
+//     time = '12:00',
+//   }) {
+//     console.log(
+//       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+//     );
+//   },
 
-  orderPasta: function (ing1, ing2, ing3) {
-    console.log(ing1);
-    console.log(ing2);
-    console.log(ing3);
-  },
-  orderPizza: function (mainIng, ...otherIng) {
-    console.log(mainIng);
-    console.log(...otherIng);
-  },
-};
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(ing1);
+//     console.log(ing2);
+//     console.log(ing3);
+//   },
+//   orderPizza: function (mainIng, ...otherIng) {
+//     console.log(mainIng);
+//     console.log(...otherIng);
+//   },
+// };
 
 // && ||
 
@@ -357,24 +357,195 @@ const restaurant = {
 
 // 4 % 2 === 0 && console.log('Even');
 
-const rest1 = {
-  name: 'Restro 1',
-  numGuests: 23,
-};
+// const rest1 = {
+//   name: 'Restro 1',
+//   numGuests: 23,
+// };
 
-const rest2 = {
-  name: 'Restro 2',
-  owner: 'Abhishek',
-};
+// const rest2 = {
+//   name: 'Restro 2',
+//   owner: 'Abhishek',
+// };
 
-// rest1.numGuests = rest1.numGuests || 10; // 23 || 10
-// rest2.numGuests = rest2.numGuests || 10; // undfined || 10
-rest1.numGuests ||= 10; // 23 || 10
-rest2.numGuests ||= 10; // undfined || 10
+// // rest1.numGuests = rest1.numGuests || 10; // 23 || 10
+// // rest2.numGuests = rest2.numGuests || 10; // undfined || 10
+// rest1.numGuests ||= 10; // 23 || 10
+// rest2.numGuests ||= 10; // undfined || 10
 
-rest1.owner &&= '<ANONYMOUS>'; // undefined && '<ANONYMOUS>'
-rest2.owner &&= '<ANONYMOUS>'; // Abhishek && '<ANONYMOUS>'
+// rest1.owner &&= '<ANONYMOUS>'; // undefined && '<ANONYMOUS>'
+// rest2.owner &&= '<ANONYMOUS>'; // Abhishek && '<ANONYMOUS>'
 
-console.log(rest1);
-console.log(rest2);
+// console.log(rest1);
+// console.log(rest2);
 
+// Forof
+
+// const menus = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menus, typeof menus);
+
+// for (let i = 0; i < menu.length; i++) {
+//   console.log(menu[i]);
+// }
+
+// for (const value of menus) {
+//   console.log(value);
+// }
+
+// console.log([...menus.entries()]);
+
+// for (const [key, value] of menus.entries()) {
+//   // console.log(value[0], value[1]);
+//   console.log(`Key is ${key} : value is ${value}`);
+// }
+
+// Weekdays array
+const Weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// Opening Hours Object
+// const openingHours = {
+//   [Weekdays[4]]: {
+//     open: 12,
+//     close: 22,
+//   },
+//   sat: {
+//     open: 11,
+//     close: 23,
+//   },
+//   sun: {
+//     open: 0,
+//     close: 24,
+//   },
+// };
+
+// Main Obj
+// const restaurant = {
+//   name: 'Calssico Italiono',
+//   location: 'Delhi, Mumbai, Jaipur',
+//   categories: ['Indian', 'South Indian', 'Chinese', 'Italian'],
+//   starterMenu: ['Chilli Potato', 'Garlic Bread', 'Kabab', 'Paneer Tikka'],
+//   mainMenu: ['Pizza', 'pasta', 'chowmein'],
+
+//   // New Method of creating properties
+//   openingHours,
+
+//   order(starterIndex, mainMenuIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainMenuIndex]];
+//   },
+
+//   orderDelivery: function ({
+//     starterIndex = 1,
+//     mainIndex = 1,
+//     address,
+//     time = '12:00',
+//   }) {
+//     console.log(
+//       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+//     );
+//   },
+
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(ing1);
+//     console.log(ing2);
+//     console.log(ing3);
+//   },
+//   orderPizza: function (mainIng, ...otherIng) {
+//     console.log(mainIng);
+//     console.log(...otherIng);
+//   },
+// };
+
+// console.log(restaurant);
+
+// ------ Optional Chaining (?.) --------
+// if (restaurant.openingHours) {
+//   if (restaurant.openingHours.fri) {
+//     console.log(restaurant.openingHours.fri.open);
+//   } else {
+//     console.log('Not Exsist');
+//   }
+// } else {
+//   console.log('Not Exsist');
+// }
+
+// console.log(restaurant.openingHours?.fri1?.['open']); //true?.true?.undefined
+
+// console.log(restaurant.orderPizza1?.('Mushroom', 'Spinach'));
+
+// const person = {
+//   name: 'Abhishek',
+//   age: 23,
+//   gender: 'Male',
+// };
+
+// console.log(person);
+
+// const personKeys = Object.keys(person);
+// console.log(personKeys);
+
+// obj.prop
+// for(const value of personKeys) {
+//   console.log(person[value]);
+// }
+
+// const personValues = Object.values(person)
+// console.log(personValues);
+
+// const personEntries = Object.entries(person)
+// console.log(personEntries);
+
+// for(const [key, value] of personEntries) {
+//   console.log(key , " : ", value);
+// }
+
+// const openingHours = {
+//   [Weekdays[4]]: {
+//     open: 12,
+//     close: 22,
+//   },
+//   sat: {
+//     open: 11,
+//     close: 23,
+//   },
+//   sun: {
+//     open: 0,
+//     close: 24,
+//   },
+// };
+
+// console.log(openingHours);
+
+// for(const [key, {open, close}] of Object.entries(openingHours)) {
+//   console.log(`${key} -- ${open} , ${close}`);
+// }
+
+// ------ SETS ------
+
+const mySet = new Set(['Pizza', 'Burger', 'Burger', 'Pizza', 'Garlic Bread']);
+// for (const value of mySet) {
+//   console.log(value);
+// }
+
+// const myString = new Set(['1000001212000', '2424','24124']);
+// console.log(myString);
+
+// add
+mySet.add('Chowmein');
+mySet.add('Chowmein');
+console.log(mySet);
+
+// delete
+mySet.delete('Burger');
+// mySet.clear();
+// console.log(mySet.size);
+
+const staff = [
+  'Waiter',
+  'Manager',
+  'Staff',
+  'Waiter',
+  'waiter',
+  'Owner',
+  'Manager',
+];
+
+const newStaff = [...new Set(staff)];
+console.log(staff, newStaff[0]);
