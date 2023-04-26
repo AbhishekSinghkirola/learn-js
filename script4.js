@@ -399,7 +399,7 @@
 // }
 
 // Weekdays array
-const Weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// const Weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 // Opening Hours Object
 // const openingHours = {
 //   [Weekdays[4]]: {
@@ -519,7 +519,7 @@ const Weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
 // ------ SETS ------
 
-const mySet = new Set(['Pizza', 'Burger', 'Burger', 'Pizza', 'Garlic Bread']);
+// const mySet = new Set(['Pizza', 'Burger', 'Burger', 'Pizza', 'Garlic Bread']);
 // for (const value of mySet) {
 //   console.log(value);
 // }
@@ -528,24 +528,156 @@ const mySet = new Set(['Pizza', 'Burger', 'Burger', 'Pizza', 'Garlic Bread']);
 // console.log(myString);
 
 // add
-mySet.add('Chowmein');
-mySet.add('Chowmein');
-console.log(mySet);
+// mySet.add('Chowmein');
+// mySet.add('Chowmein');
+// console.log(mySet);
 
 // delete
-mySet.delete('Burger');
+// mySet.delete('Burger');
 // mySet.clear();
 // console.log(mySet.size);
 
-const staff = [
-  'Waiter',
-  'Manager',
-  'Staff',
-  'Waiter',
-  'waiter',
-  'Owner',
-  'Manager',
-];
+// const staff = [
+//   'Waiter',
+//   'Manager',
+//   'Staff',
+//   'Waiter',
+//   'waiter',
+//   'Owner',
+//   'Manager',
+// ];
 
-const newStaff = [...new Set(staff)];
-console.log(staff, newStaff[0]);
+// const newStaff = [...new Set(staff)];
+// console.log(staff, newStaff[0]);
+
+// Map
+
+// const myMap = new Map();
+
+// myMap.set('name', 'Abhishek');
+// myMap.set(true, 'This is boolean key');
+// console.log(myMap.set(1, 'An integer is a key'));
+
+// console.log(myMap.get('name'));
+// console.log(myMap.get(true));
+// console.log(myMap.get(1));
+
+// console.log(myMap.has('name1'));
+
+// myMap.delete('name');
+// // myMap.clear();
+
+// console.log(myMap.size);
+
+// myMap.set(2, 'Something!!').set(3, 'Key 3').set(false, 'False Key');
+// console.log(myMap);
+
+const myMap2 = new Map([
+  [1, 'First Key'],
+  [true, 'Key Name is true'],
+  [false, 'Key Name is False'],
+]);
+
+const arr1 = [1, 2];
+myMap2.set(arr1, 'Key has an array');
+
+// console.log(myMap2);
+// console.log(myMap2.get(arr1));
+
+// for(const [key,value] of myMap2) {
+//     console.log(`key is ${key} and value is ${value}`);
+// }
+
+// console.log([...myMap2]);
+
+// console.log([...myMap2.entries()]);
+// console.log([...myMap2.keys()]);
+// console.log([...myMap2.values()]);
+
+// const obj = {
+//   name: 'Ram',
+//   age: 22,
+//   gender: 'Male',
+// };
+
+// // console.log(Object.entries(obj));
+// const objMap = new Map(Object.entries(obj));
+// console.log(objMap);
+
+// Strings
+// const text = 'My Name is Abhishek';
+// console.log(text[0]);
+// console.log(text[2]);
+// console.log(text[3]);
+
+// console.log(text.length);
+
+// Index of and last index of
+// console.log(text.indexOf('M'));
+// console.log(text.indexOf('i'));
+// console.log(text.indexOf('Abhishek'));
+
+// console.log(text.lastIndexOf('i'));
+
+// Slice
+
+// const name = text.slice(11);
+// console.log(text, name);
+// console.log(text.slice(0, 5));
+
+// console.log(text.slice(text.indexOf('Abhishek'), 13));
+// console.log(text.slice(-2));
+
+// console.log(text.slice(0,-1));
+// console.log(text[text.length - 1]);
+// const text = 'My Name is Abhishek';
+
+// console.log(text.toLowerCase());
+// console.log(text.toUpperCase());
+
+// function capitalizeWord(str) {
+//   const lower = str.toLowerCase();
+//   const newStr = lower[0].toUpperCase() + lower.slice(1);
+//   return newStr;
+// }
+
+// console.log(capitalizeWord('abhishek'));
+// console.log(capitalizeWord('abhinav'));
+// console.log(capitalizeWord('abhitYOasd'));
+
+// const str = '     Hello       ';
+// console.log(str.trim());
+
+// const amount = 'RS 270.00';
+// console.log(amount.replace('RS', '$').replace('.' , ','));
+
+const text = 'My name is abhishek';
+
+// console.log(text.includes('Abhishek1'));
+// console.log(text.startsWith('Mi'));
+// console.log(text.endsWith('Abhishek'));
+
+// const str = 'Hi+I+am';
+
+// console.log(str.split('+'));
+
+const lower = text.toLowerCase();
+const arr = lower.split(' ');
+
+const newArr = [];
+for (const value of arr) {
+  newArr.push(value[0].toUpperCase() + value.slice(1));
+}
+
+console.log(newArr.join(' '));
+
+console.log("Hello".padStart(15, '*'));
+console.log("Hello".padEnd(15, '*'));
+
+console.log("Hi-".repeat(5));
+
+
+console.log(text.slice(0,11).padEnd(text.length, '*'));
+console.log(text);
+
+console.log("I am Abhishek Singh am ".replace(/Abhishek/, "Ram"));
