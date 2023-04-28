@@ -90,3 +90,87 @@
 
 // newFunc(22)
 
+// Call, apply and bind
+
+const person = {
+  firstName: 'Abhishek',
+  currentYear: 2023,
+  calcAge: function (birthYear, gender) {
+    console.log(
+      `Name : ${this.firstName} and Age : ${
+        this.currentYear - birthYear
+      } Gender : ${gender}`
+    );
+  },
+};
+
+// person.calcAge(2001, 'male');
+
+const age = function (birthYear, gender) {
+  console.log(
+    `Name : ${this.firstName} and Age : ${
+      this.currentYear - birthYear
+    } Gender : ${gender}`
+  );
+};
+
+const person2 = {
+  firstName: 'Ram',
+  currentYear: 2023,
+};
+
+// age.call(person2, 2001, 'male');
+
+// const arr = [2001, 'male'];
+// age.apply(person2, arr);
+// age.call(person2,2001);
+
+// bind
+
+// const bindedFunc = age.bind(person2, 2001);
+// bindedFunc(2001, 'male');
+
+// bindedFunc('male');
+// bindedFunc('female');
+
+// const btn = document.createElement('button');
+// btn.textContent = 'Get Value';
+// document.body.appendChild(btn);
+
+// const btnEl = document.querySelector('button');
+
+// btnEl.addEventListener('click', age.bind(person2, 2001, 'male'))
+
+// IIFE immediately invoked Function
+
+// function a() {
+//   console.log('Working...');
+// }
+// a();
+// a();
+// a();
+
+// (function () {
+//   console.log('Only Run Once');
+// })();
+
+let f;
+
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a);
+  };
+};
+
+const h = function () {
+  const a = 100;
+  f = function () {
+    console.log(a);
+  };
+};
+
+g();
+f()
+h();
+f();
