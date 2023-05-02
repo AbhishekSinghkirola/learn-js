@@ -145,33 +145,33 @@
 
 // console.log(max);
 
-const persons = [
-  {
-    id: 1,
-    personName: 'Abhishek',
-    age: 16,
-  },
-  {
-    id: 2,
-    personName: 'Ram',
-    age: 28,
-  },
-  {
-    id: 3,
-    personName: 'Rajesh',
-    age: 16,
-  },
-  {
-    id: 4,
-    personName: 'Geeta',
-    age: 19,
-  },
-  {
-    id: 5,
-    personName: 'Manish',
-    age: 33,
-  },
-];
+// const persons = [
+//   {
+//     id: 1,
+//     personName: 'Abhishek',
+//     age: 16,
+//   },
+//   {
+//     id: 2,
+//     personName: 'Ram',
+//     age: 28,
+//   },
+//   {
+//     id: 3,
+//     personName: 'Rajesh',
+//     age: 16,
+//   },
+//   {
+//     id: 4,
+//     personName: 'Geeta',
+//     age: 19,
+//   },
+//   {
+//     id: 5,
+//     personName: 'Manish',
+//     age: 33,
+//   },
+// ];
 
 // persons.forEach(function ({ id, personName, age }) {
 //   // console.log(value.personName);
@@ -186,5 +186,119 @@ const persons = [
 
 // console.log(adultPersons);
 
-const sumOfAges = persons.reduce((acc, value) => acc + value.age, 0);
-console.log(sumOfAges);
+// const sumOfAges = persons.reduce((acc, value) => acc + value.age, 0);
+// console.log(sumOfAges);
+
+// FIND
+
+// const names = ['Abhishek', 'Ram', 'Abhishek', 'Kishan', 'Geeta'];
+
+// console.log(
+//   names.find(function (value) {
+//     return value === 'Abhishek';
+//   })
+// );
+
+// const persons = [
+//   {
+//     id: 1,
+//     personName: 'Abhishek',
+//     age: 16,
+//   },
+//   {
+//     id: 2,
+//     personName: 'Ram',
+//     age: 28,
+//   },
+//   {
+//     id: 3,
+//     personName: 'Rajesh',
+//     age: 16,
+//   },
+//   {
+//     id: 4,
+//     personName: 'Geeta',
+//     age: 19,
+//   },
+//   {
+//     id: 5,
+//     personName: 'Manish',
+//     age: 33,
+//   },
+// ];
+
+// const res = persons.find(value => value.id === 4);
+// const res = persons.find(function (value) {
+//   return value.id === 4;
+// });
+
+// console.log(res);
+
+// const res = persons.findIndex(function (value) {
+//   return value.id > 4;
+// });
+
+// console.log(res);
+
+// Some and Every
+
+// const arr = [200, 12, -1000, 445, -450, 999, -44, 1, 67, -80];
+
+// const res = arr.some(function (value) {
+//   return value < 0;
+// });
+
+// console.log(res);
+
+// const res = arr.every(function (value) {
+//   return value < 0;
+// });
+
+// console.log(res);
+
+// const arr = [[1, 2, 3], [4, 5], 6, 7, 8];
+
+// const newArr = arr.flat();
+
+// console.log(arr);
+// console.log(newArr);
+
+// const arr = [1, [2, 3], [4, 5, [6, 7]], 8];
+
+// const newArr = arr.flat(2);
+// console.log(arr);
+// console.log(newArr);
+
+const obj = [
+  {
+    id: 1,
+    fname: 'abhishek',
+    num: [1, 2, 4],
+  },
+  {
+    id: 2,
+    fname: 'Ram',
+    num: [5, 6, -7],
+  },
+  {
+    id: 1,
+    fname: 'Mohan',
+    num: [11, -100, -89],
+  },
+];
+
+// const res = obj
+//   .map(function (value) {
+//     return value.num;
+//   })
+//   .flat()
+//   .filter(value => value > 0)
+//   .reduce((sum, cur) => sum + cur, 0);
+
+// console.log(res);
+
+const res = obj.flatMap(function (value) {
+  return value.num;
+});
+
+console.log(res);
