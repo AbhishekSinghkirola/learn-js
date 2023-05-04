@@ -269,23 +269,23 @@
 // console.log(arr);
 // console.log(newArr);
 
-const obj = [
-  {
-    id: 1,
-    fname: 'abhishek',
-    num: [1, 2, 4],
-  },
-  {
-    id: 2,
-    fname: 'Ram',
-    num: [5, 6, -7],
-  },
-  {
-    id: 1,
-    fname: 'Mohan',
-    num: [11, -100, -89],
-  },
-];
+// const obj = [
+//   {
+//     id: 1,
+//     fname: 'abhishek',
+//     num: [1, 2, 4],
+//   },
+//   {
+//     id: 2,
+//     fname: 'Ram',
+//     num: [5, 6, -7],
+//   },
+//   {
+//     id: 1,
+//     fname: 'Mohan',
+//     num: [11, -100, -89],
+//   },
+// ];
 
 // const res = obj
 //   .map(function (value) {
@@ -297,8 +297,91 @@ const obj = [
 
 // console.log(res);
 
-const res = obj.flatMap(function (value) {
-  return value.num;
-});
+// const res = obj.flatMap(function (value) {
+//   return value.num;
+// });
 
-console.log(res);
+// console.log(res);
+
+// const arr = ['Ram', 'Abhishek', 'Zoya', 'Manoj'];
+
+// // console.log(arr.sort());
+
+// console.log(
+//   arr.sort(function (a, b) {
+//     if (a < b) return 1;
+//     if (a > b) return -1;
+//   })
+// );
+
+// console.log(arr.sort((a, b) => b - a));
+
+// const num = [1, 3, -2, -4, 5];
+
+// console.log(num.sort());
+
+// num.sort(function (a, b) {
+//   if (a > b) {
+//     return 1; //Keep Order
+//   }
+
+//   if (a < b) {
+//     return -1; //Swap
+//   }
+// });
+
+// num.sort(function (a, b) {
+//   if (a < b) {
+//     return 1; //Keep Order
+//   }
+
+//   if (a > b) {
+//     return -1; //Swap
+//   }
+// });
+
+// num.sort(function (a, b) {
+//   return a - b;
+// });
+
+// num.sort((a, b) => a - b);
+// num.sort((a, b) => b - a);
+
+// console.log(num);
+
+// Empty Arrays
+// console.log([1, 2, 3, 5]);
+// console.log(new Array(1, 2, 3, 4, 5));
+
+// const x = new Array(7);
+// console.log(x);
+
+// const res = ;
+// console.log(res);
+
+// x.fill(5, 4, 6);
+// console.log(x);
+
+// Array.from
+
+// const y = Array.from({ length: 7 }, function () {
+//   return 1;
+// });
+// const y = Array.from({ length: 7 }, function (cur, i) {
+//   return i + 1;
+// });
+
+// console.log(y);
+
+// const a = new Set([1, 2, 3]);
+// console.log(a);
+
+// console.log(Array.from(a));
+
+// const map = new Map([
+//   ['id', 1],
+//   ['name', 'Abhishek'],
+// ]);
+
+
+// console.log(Array.from(map));
