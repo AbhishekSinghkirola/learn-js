@@ -163,17 +163,16 @@
 //   document.body.innerHTML = `<h1 style="text-align: center; font-size: 10rem; margin-top: 2rem;">${time}</h1>`;
 // }, 1000);
 
-let time = 10;
+// let time = 300;
 
-const timer = function () {
-  const min = Math.trunc(time / 60);
-  const sec = Math.trunc(time % 60);
-  if (time === 0) clearInterval(res);
-  time--;
-  console.log(min, sec);
-};
+// const timer = function () {
+//   const min = Math.trunc(time / 60);
+//   const sec = Math.trunc(time % 60);
+//   if (time === 0) clearInterval(res);
+//   time--;
+//   console.log(min, sec);
+// };
 
-timer();
-const res = setInterval(timer, 1000);
+// timer();
+// const res = setInterval(timer, 1000);
 
-// 4
