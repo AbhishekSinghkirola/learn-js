@@ -67,3 +67,112 @@
 // console.log(document.querySelector('img').classList.remove('a'));
 // console.log(document.querySelector('img').classList.toggle('a'));
 // console.log(document.querySelector('img').classList.contains('a'));
+
+// const section1 = document.querySelector('#section--1');
+// const button = document.querySelector('button');
+
+// button.addEventListener('click', function () {
+//   const s1coord = section1.getBoundingClientRect();
+
+//   //   console.log(s1coord);
+//   // console.log(section1.getBoundingClientRect());
+
+//   // console.log(document.documentElement.clientHeight);
+//   // console.log(document.documentElement.clientWidth);
+
+//   // console.log(window.pageXOffset);
+//   // console.log(window.pageYOffset);
+
+//   //   window.scrollTo(
+//   //     s1coord.left + window.pageXOffset,
+//   //     s1coord.top + window.pageYOffset
+//   //   );
+
+//   //   window.scrollTo({
+//   //     left: s1coord.left + window.pageXOffset,
+//   //     top: s1coord.top + window.pageYOffset,
+//   //     behavior: 'smooth',
+//   //   });
+
+// //   section1.scrollIntoView({
+// //     behavior: 'smooth',
+// //     // block: 'center',
+// //     inline: 'nearest',
+// //   });
+// });
+
+// const btn = document.querySelector('button');
+
+// const handleClick = () => {
+//   console.log('Clicked!!');
+//   btn.removeEventListener('click', handleClick);
+// };
+
+// btn.addEventListener('click', handleClick);
+
+// setTimeout(() => btn.removeEventListener('click', handleClick), 3000);
+
+// btn.onclick = function () {
+//     console.log('Clicked!!');
+// }
+
+// document.querySelector('input').addEventListener('input', function () {
+//   console.log(this.value);
+// });
+
+// Event Delegation
+
+const first = document.querySelector('#first');
+const second = document.querySelector('#second');
+const third = document.querySelector('#third');
+const fourth = document.querySelector('#fourth');
+
+// first.addEventListener('click', function () {
+//   alert('1');
+// });
+
+// second.addEventListener('click', function () {
+//   alert('2');
+// });
+
+// third.addEventListener('click', function () {
+//   alert('3');
+// });
+
+// fourth.addEventListener('click', function (e) {
+//   alert('4');
+
+//   // e.stopPropagation()
+// });
+
+// document.body.addEventListener('click', function (e) {
+//     console.log(e.target.dataset.id);
+//     // console.log(e.currentTarget);
+// })
+
+// Dom Traversing
+// console.log(document.querySelector('h1'));
+
+// const div = document.querySelector('div');
+
+// console.log(div.childNodes);
+// console.log(div.children);
+// console.log(div.lastElementChild);
+
+// console.log(div.parentNode);
+// console.log(div.parentElement);
+
+// console.log(document.querySelector('span').closest('body'));
+
+// console.log(document.querySelector('span').nextElementSibling);
+// console.log(document.querySelector('span').previousElementSibling);
+
+// console.log(new String('Abhishek'));
+
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
+
+const rgbColorGenerator = () =>
+  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+
+console.log(rgbColorGenerator());
