@@ -8,5 +8,14 @@
   </head>
   <body>
     <script src="script9.js"></script>
+    <script>
+      const Hello = function (a) {
+        this.a = a;
+      };
+
+      Hello.prototype.age = function () {
+        console.log(this.a);
+      }
+    </script>
   </body>
 </html>

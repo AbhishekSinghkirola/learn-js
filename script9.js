@@ -132,9 +132,132 @@
 
 // console.log(arr.unique());
 
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
+
+//   calcAge() {
+//     return 2023 - this.birthYear;
+//   }
+
+//   greet() {
+//     console.log('Hi There 👋');
+//   }
+
+//getter and setter methods
+
+//   get age() {
+//     return 2023 - this.birthYear;
+//   }
+
+//   set fullName(name) {
+//     if (name.includes(' ')) this._fullName = name;
+//     else alert(`${name} is not a Full name`);
+//   }
+
+//   get fullName() {
+//     return this._fullName;
+//   }
+
+//   static hey() {
+//     console.log(`Hey, Hi there!`);
+//   }
+// }
+
+// const abhishek = new PersonCl('Abhishek Singh', 1991);
+// abhishek.fullName = 'Abhishek Singh';
+
+// PersonCl.prototype.calcAge = function () {
+//   return 2023 - this.birthYear;
+// };
+
+// console.log(abhishek.firstName);
+// console.log(abhishek.birthYear);
+// console.log(abhishek.calcAge());
+// abhishek.greet()
+
+// console.log(PersonCl.prototype);
+// console.log(abhishek.__proto__);
+// console.log(abhishek);
+
+// console.log(abhishek.age);
+// console.log(abhishek.fullName);
+
+// PersonCl.hey();
+// Array.from()
+
+// Object.create()
+// const PersonProto = {
+//   hey() {
+//     console.log(`Hello There!`);
+//   },
+
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   },
+
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
+// };
+
+// const steven = Object.create(PersonProto);
+// steven.init('Steven', 1991);
+// // steven.fullName = 'Steven';
+// // steven.birthYear = 1991;
+
+// console.log(steven);
+// console.log(steven.__proto__);
+
+// steven.hey();
+// steven.calcAge();
+
+// const Person = function (firstName, birthYear) {
+//   this.firstName = firstName;
+//   this.birthYear = birthYear;
+// };
+
+// Person.prototype.calcAge = function () {
+//   console.log(2023 - this.birthYear);
+// };
+
+// const Student = function (firstName, birthYear, course) {
+//   Person.call(this, firstName, birthYear);
+//   this.course = course;
+// };
+
+// Linking Prototype
+// Student.prototype = Object.create(Person.prototype);
+
+// Student.prototype.introduce = function () {
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// };
+// const abhishek = new Student('Abhishek', 1991, 'PHP');
+
+// console.log(abhishek);
+// abhishek.calcAge();
+// abhishek.introduce();
+
+// console.log(abhishek.__proto__);
+// console.log(abhishek.__proto__.__proto__);
+// console.log(abhishek.__proto__.__proto__.__proto__);
+// console.log(abhishek.__proto__.__proto__.__proto__.__proto__);
+
+// console.log(abhishek instanceof Student);
+// console.log(abhishek instanceof Person);
+// console.log(abhishek instanceof Object);
+
+// Student.prototype.constructor = Student;
+// console.log(Student.prototype.constructor);
+
+// Inheritance in Classes
+
 class PersonCl {
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
     this.birthYear = birthYear;
   }
 
@@ -147,17 +270,126 @@ class PersonCl {
   }
 }
 
-const abhishek = new PersonCl('Abhishek', 1991);
+// class StudentCl extends PersonCl {
+//   constructor(fullName, birthYear, course) {
+//     super(fullName, birthYear);
+//     this.course = course;
+//   }
 
-// PersonCl.prototype.calcAge = function () {
-//   return 2023 - this.birthYear;
+//   introduce = function () {
+//     console.log(`My name is ${this.firstName} and I study ${this.course}`);
+//   };
+
+//   calcAge() {
+//     return `Child : ${2023 - this.birthYear}`;
+//   }
+// }
+
+// const abhishek = new StudentCl('Abhishek', 1991, 'PHP');
+
+// console.log(abhishek.calcAge());
+
+// Inheritance in Object.create()
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   },
+
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
 // };
 
-console.log(abhishek.firstName);
-console.log(abhishek.birthYear);
-console.log(abhishek.calcAge());
-abhishek.greet()
+// const StudentProto = Object.create(PersonProto);
 
-console.log(PersonCl.prototype);
-console.log(abhishek.__proto__);
-console.log(abhishek);
+// StudentProto.init = function (firstName, birthYear, course) {
+//   PersonProto.init.call(this, firstName, birthYear);
+//   this.course = course;
+// };
+
+// StudentProto.introduce = function () {
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// };
+
+// const abhishek = Object.create(StudentProto);
+// abhishek.init('Abhishek', 1991, 'PHP');
+// abhishek.introduce();
+
+// class Account {
+//   constructor(owner, currency, pin) {
+//     this.owner = owner;
+//     this.currency = currency;
+//     this._pin = pin;
+//     this._movements = [];
+
+//     console.log(`Thanks for opening an Account ${owner}`);
+//   }
+
+//   // Public Interface
+//   deposit(value) {
+//     this._movements.push(value);
+//   }
+
+//   withdrawal(value) {
+//     this._movements.push(-value);
+//   }
+
+//   _approveLoan(value) {
+//     return true;
+//   }
+
+//   requestLoan(value) {
+//     if (this._approveLoan(value)) {
+//       this._movements.push(value);
+//     }
+//   }
+// }
+
+// const acc1 = new Account('Abhishek', 'INR', 111);
+
+// acc1.deposit(2000);
+// acc1.deposit(200);
+// acc1.withdrawal(200);
+// acc1.withdrawal(1000);
+// acc1.requestLoan(5000);
+
+// // acc1.movements.push(100)
+// // console.log(acc1.pin);
+// console.log(acc1);
+
+class Account {
+  #pin;
+  #movements;
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.#pin = pin;
+    this.#movements = [];
+
+    console.log(`Thanks for opening an Account ${owner}`);
+  }
+
+  // Public Interface
+  deposit(value) {
+    this.#movements.push(value);
+  }
+
+  withdrawal(value) {
+    this.#movements.push(-value);
+  }
+
+  _approveLoan(value) {
+    return true;
+  }
+
+  requestLoan(value) {
+    if (this._approveLoan(value)) {
+      this.#movements.push(value);
+    }
+  }
+}
+
+const acc1 = new Account('Abhishek', 'INR', 111);
+
+// console.log(acc1.#pin);
