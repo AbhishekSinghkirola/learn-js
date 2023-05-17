@@ -393,3 +393,17 @@ class Account {
 const acc1 = new Account('Abhishek', 'INR', 111);
 
 // console.log(acc1.#pin);
+
+
+// Event Loop
+setTimeout(() => console.log('Set timeout'), 0);
+console.log('Test Start');
+
+console.log('Test End');
+console.log('Test End1');
+
+// Dom Api
+// Geolocation API
+// Event handlers
+// Image Load
+// Ajax calls
