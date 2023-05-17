@@ -46,6 +46,8 @@ const getCountriesData = function (country) {
   // console.log(request.responseText);
   request.addEventListener('load', function () {
     const [data] = JSON.parse(this.responseText);
+
+    // Render Country
     renderCountry(data);
   });
 };
