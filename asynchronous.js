@@ -126,7 +126,7 @@ const getCountryData = function (country) {
     .catch(err => console.error(`My Error : ${err.message}`));
 };
 
-getCountryData('portugal');
+// getCountryData('portugal');
 // getCountryData('canada');
 // getCountryData('australia');
 
@@ -187,13 +187,113 @@ getCountryData('portugal');
 //   }
 // );
 
-const getPosition = function () {
-  return new Promise((resolve, reject) =>
-    navigator.geolocation.getCurrentPosition(resolve, reject)
-  );
-};
+// const getPosition = function () {
+//   return new Promise((resolve, reject) =>
+//     navigator.geolocation.getCurrentPosition(resolve, reject)
+//   );
+// };
 
-getPosition().then(pos => {
-  const { latitude, longitude } = pos.coords;
-  console.log(`https://www.google.com/maps/@${latitude},${longitude},15z`);
-});
+// getPosition().then(pos => {
+//   const { latitude, longitude } = pos.coords;
+//   console.log(`https://www.google.com/maps/@${latitude},${longitude},15z`);
+// });
+
+// Async Await
+
+// const getCountry = async function (country) {
+//   // const request = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+//   // const data = await request.json();
+
+//   try {
+//     const data = await getJSON(
+//       `https://restcountries.com/v3.1/name/${country}`
+//     );
+//     renderCountry(data[0]);
+
+//     const neighbour = data[0]?.borders?.[0];
+//     if (!neighbour) throw new Error('No neighbouring country!!');
+//     const neighbourData = await getJSON(
+//       `https://restcountries.com/v3.1/name/${neighbour}`
+//     );
+//     renderCountry(neighbourData[0], 'neighbour');
+//   } catch (err) {
+//     console.error(err.message);
+//   }
+// };
+
+// getCountry('australia');
+
+// const wait = function (seconds) {
+//   return new Promise(resolve => {
+//     setTimeout(resolve, seconds * 1000);
+//   });
+// };
+
+//IIFE
+// (async function () {
+//   await wait(1);
+//   console.log(`1 Second Passed`);
+
+//   await wait(1);
+//   console.log(`2 Second Passed`);
+
+//   await wait(1);
+//   console.log(`3 Second Passed`);
+
+//   await wait(1);
+//   console.log(`4 Second Passed`);
+// })();
+
+// const getCountries = async function (c1, c2, c3) {
+//   try {
+//     // const data = await getJSON(`https://restcountries.com/v3.1/name/${c1}`);
+//     // const data2 = await getJSON(`https://restcountries.com/v3.1/name/${c2}`);
+//     // const data3 = await getJSON(`https://restcountries.com/v3.1/name/${c3}`);
+
+//     // console.log([...data, ...data2, ...data3]);
+
+//     const data = await Promise.all([
+//       getJSON(`https://restcountries.com/v3.1/name/${c1}`),
+//       getJSON(`https://restcountries.com/v3.1/name/${c2}`),
+//       getJSON(`https://restcountries.com/v3.1/name/${c3}`),
+//     ]);
+
+//     console.log(data.flat());
+//   } catch (err) {
+//     console.error(err.message);
+//   }
+// };
+
+// getCountries('egypt', 'portugal', 'canada');
+
+// Promise.all([
+//   Promise.resolve('Success 1'),
+//   Promise.resolve('Success 2'),
+//   Promise.reject('Reject 1'),
+// ])
+//   .then(res => console.log(res))
+//   .catch(err => console.error(err));
+
+// Promise.race([
+//   Promise.reject('Reject 1'),
+//   Promise.resolve('Success 1'),
+//   Promise.resolve('Success 2'),
+// ])
+//   .then(res => console.log(res))
+//   .catch(err => console.error(err));
+
+// Promise.allSettled([
+//   Promise.reject('Reject 1'),
+//   Promise.resolve('Success 1'),
+//   Promise.resolve('Success 2'),
+// ])
+//   .then(res => console.log(res))
+//   .catch(err => console.error(err));
+
+// Promise.any([
+//   Promise.reject('Reject 1'),
+//   Promise.resolve('Success 2'),
+//   Promise.resolve('Success 1'),
+// ])
+//   .then(res => console.log(res))
+//   .catch(err => console.error(err));
